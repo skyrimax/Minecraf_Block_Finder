@@ -13,10 +13,108 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Output">
+      <UniqueIdentifier>{9b5d4414-9f7a-4fbf-a284-0a0e7bbe0dda}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Output\src">
+      <UniqueIdentifier>{3809decb-e5ea-49d0-94c1-9ee2770743d4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Output\include">
+      <UniqueIdentifier>{37f55976-d0bb-45ae-9b18-0af0ddda0bdf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utility">
+      <UniqueIdentifier>{7ec7f0db-b473-465d-80f2-197a5805702d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utility\src">
+      <UniqueIdentifier>{de1506bf-0d1f-45ec-899f-a156c7bf7ab8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utility\include">
+      <UniqueIdentifier>{6c2cbdef-5380-49b0-8971-da6b62aa8457}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Finder">
+      <UniqueIdentifier>{5d7f1838-6c7e-4564-adea-2488fa3d9388}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Finder\src">
+      <UniqueIdentifier>{21f92a91-2ed5-4c20-8764-1140a64de636}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Finder\include">
+      <UniqueIdentifier>{07aa203a-d20e-4519-b35f-72899e1e534d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Minecraft_Block_Finder.cpp">
+    <ClCompile Include="Output\src\AbstractOutput.cpp">
+      <Filter>Output\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Output\src\ConsoleOutput.cpp">
+      <Filter>Output\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Output\src\CSVOutput.cpp">
+      <Filter>Output\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Output\src\Output.cpp">
+      <Filter>Output\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Utility\src\Utility.cpp">
+      <Filter>Utility\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Finder\src\DimBlockFinder.cpp">
+      <Filter>Finder\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Finder\src\RegionBlockFinder.cpp">
+      <Filter>Finder\src</Filter>
+    </ClCompile>
+    <ClCompile Include="MinecraftBlockFinder.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Finder\src\DataExtractor.cpp">
+      <Filter>Finder\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Utility\src\Coordinate.cpp">
+      <Filter>Utility\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Finder\src\BlockFinder.cpp">
+      <Filter>Finder\src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="argparse.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Output\include\AbstractOutput.h">
+      <Filter>Output\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Output\include\ConsoleOutput.h">
+      <Filter>Output\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Output\include\CSVOutput.h">
+      <Filter>Output\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Output\include\Output.h">
+      <Filter>Output\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Utility\include\Utility.h">
+      <Filter>Utility\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Finder\include\DimBlockFinder.h">
+      <Filter>Finder\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Finder\include\RegionBlockFinder.h">
+      <Filter>Finder\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Finder\include\DataExtractor.h">
+      <Filter>Finder\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Utility\include\Coordinate.h">
+      <Filter>Utility\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Finder\include\BlockFinder.h">
+      <Filter>Finder\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Finder\include\thread_pool.hpp">
+      <Filter>Finder\include</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
 </Project>
