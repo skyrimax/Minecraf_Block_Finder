@@ -57,12 +57,6 @@
     <ClCompile Include="Utility\src\Utility.cpp">
       <Filter>Utility\src</Filter>
     </ClCompile>
-    <ClCompile Include="Finder\src\DimBlockFinder.cpp">
-      <Filter>Finder\src</Filter>
-    </ClCompile>
-    <ClCompile Include="Finder\src\RegionBlockFinder.cpp">
-      <Filter>Finder\src</Filter>
-    </ClCompile>
     <ClCompile Include="MinecraftBlockFinder.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -94,12 +88,6 @@
     </ClInclude>
     <ClInclude Include="Utility\include\Utility.h">
       <Filter>Utility\include</Filter>
-    </ClInclude>
-    <ClInclude Include="Finder\include\DimBlockFinder.h">
-      <Filter>Finder\include</Filter>
-    </ClInclude>
-    <ClInclude Include="Finder\include\RegionBlockFinder.h">
-      <Filter>Finder\include</Filter>
     </ClInclude>
     <ClInclude Include="Finder\include\DataExtractor.h">
       <Filter>Finder\include</Filter>

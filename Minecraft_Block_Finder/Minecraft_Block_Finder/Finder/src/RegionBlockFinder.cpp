@@ -79,7 +79,7 @@ std::vector<Coordinate> RegionBlockFinder::workerSingleThread(size_t chunkX, siz
 
 	size_t nbBlocks = blocksData.size();
 
-	for (size_t index = 0; index < nbBlocks; ++index) {
+	for (int index = 0; index < nbBlocks; ++index) {
 		if (blocksData[index] = m_id) {
 			int sectionX = index % 16;
 			int sectionZ = (index / 16) % 16;

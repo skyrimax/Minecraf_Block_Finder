@@ -74,7 +74,7 @@ std::map<int, std::vector<Coordinate>> BlockFinder::searchDim(const std::filesys
 		}
 
 		for (const auto& id : ids) {
-			allMatches[id].insert(allMatches[id].end(), matches.f[i].get().begin(), matches.f[i].get().end());
+			allMatches[id].insert(allMatches[id].end(), matches.f[i].get()[id].begin(), matches.f[i].get()[id].end());
 		}
 	}
 
@@ -115,7 +115,7 @@ std::map<int, std::vector<Coordinate>> BlockFinder::searchRegion(const std::file
 		}
 
 		for (const auto& id : ids) {
-			allMatches[id].insert(allMatches[id].end(), matches.f[i].get().begin(), matches.f[i].get().end());
+			allMatches[id].insert(allMatches[id].end(), matches.f[i].get()[id].begin(), matches.f[i].get()[id].end());
 		}
 	}
 
@@ -132,9 +132,9 @@ std::map<int, std::vector<Coordinate>> BlockFinder::searchChunk(const std::files
 
 	auto chunk = DataExtractor::extractChunk(pathToRegion, chunkX, chunkY);
 
-	for (size_t i = 0; i < chunk.size(); ++i) {
-		for (size_t j = 0; j < chunk[i].size(); ++j) {
-			for (size_t k = 0; k < chunk[i][j].size(); ++k) {
+	for (int i = 0; i < chunk.size(); ++i) {
+		for (int j = 0; j < chunk[i].size(); ++j) {
+			for (int k = 0; k < chunk[i][j].size(); ++k) {
 				if (matches.find(chunk[i][j][k]) != matches.end()) {
 					matches[chunk[i][j][k]].push_back(Coordinate(i, j, k));
 				}

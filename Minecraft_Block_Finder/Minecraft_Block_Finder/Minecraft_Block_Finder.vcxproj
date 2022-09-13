@@ -162,8 +162,6 @@
   <ItemGroup>
     <ClCompile Include="Finder\src\BlockFinder.cpp" />
     <ClCompile Include="Finder\src\DataExtractor.cpp" />
-    <ClCompile Include="Finder\src\DimBlockFinder.cpp" />
-    <ClCompile Include="Finder\src\RegionBlockFinder.cpp" />
     <ClCompile Include="MinecraftBlockFinder.cpp" />
     <ClCompile Include="Output\src\AbstractOutput.cpp" />
     <ClCompile Include="Output\src\ConsoleOutput.cpp" />
@@ -176,8 +174,6 @@
     <ClInclude Include="argparse.hpp" />
     <ClInclude Include="Finder\include\BlockFinder.h" />
     <ClInclude Include="Finder\include\DataExtractor.h" />
-    <ClInclude Include="Finder\include\DimBlockFinder.h" />
-    <ClInclude Include="Finder\include\RegionBlockFinder.h" />
     <ClInclude Include="Finder\include\thread_pool.hpp" />
     <ClInclude Include="Output\include\AbstractOutput.h" />
     <ClInclude Include="Output\include\ConsoleOutput.h" />
