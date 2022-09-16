@@ -144,3 +144,12 @@ std::map<int, std::vector<Coordinate>> BlockFinder::searchChunk(const std::files
 
 	return matches;
 }
+
+std::filesystem::path BlockFinder::pathToDimData(std::filesystem::path pathToWorld, int dim)
+{
+	return pathToWorld / (dim ? "DIM" + dim : "") / "region";
+}
+
+void BlockFinder::output(std::map<int, std::map<int, std::vector<Coordinate>>> matches)
+{
+}
