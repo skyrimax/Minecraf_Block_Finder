@@ -6,9 +6,9 @@
 
 #include <thread>
 
-#include "argparse.hpp"
+#include <argparse/argparse.hpp>
 
-#include "BlockFinder.h"
+#include "BlockFinder.hpp"
 
 argparse::ArgumentParser createParser();
 

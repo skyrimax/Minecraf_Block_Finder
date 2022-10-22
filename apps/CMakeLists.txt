@@ -1,0 +1,4 @@
+add_executable(MinecraftBlockFinder MinecraftBlockFinder.cpp)
+target_compile_features(MinecraftBlockFinder PRIVATE cxx_std_17)
+
+target_link_libraries(MinecraftBlockFinder PRIVATE minecraft_block_finder_library argparse)

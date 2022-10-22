@@ -1,8 +1,8 @@
-#include "RegionBlockFinder.h"
+#include "RegionBlockFinder.hpp"
 
 #include <thread>
 
-#include "DataExtractor.h"
+#include "DataExtractor.hpp"
 
 void RegionBlockFinder::setRegion(int regionX, int regionZ)
 {
