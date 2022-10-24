@@ -44,6 +44,7 @@ FetchContent_MakeAvailable(argparse)
 FetchContent_Declare(
     json
     URL https://github.com/nlohmann/json/releases/download/v3.11.2/json.tar.xz
+    DOWNLOAD_EXTRACT_TIMESTAMP True
 )
 FetchContent_MakeAvailable(json)
 

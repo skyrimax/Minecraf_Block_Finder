@@ -5,7 +5,7 @@
 
 #include <future>
 
-#include "Coordinate.h"
+#include "Coordinate.hpp"
 
 class RegionBlockFinder
 {

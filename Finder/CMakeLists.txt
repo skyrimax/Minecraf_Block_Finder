@@ -37,18 +37,29 @@ include(FetchContent)
 FetchContent_Declare(
     NBTExplorer
     URL https://github.com/jaquadro/NBTExplorer/releases/download/v2.8.0-win/NBTExplorer-2.8.0.zip
+    DOWNLOAD_EXTRACT_TIMESTAMP True
 )
 FetchContent_MakeAvailable(NBTExplorer)
 message("NBTExplorer folder id : ${nbtexplorer_SOURCE_DIR}")
+
+# fetch latest argparse
+FetchContent_Declare(
+    thread_pool
+    GIT_REPOSITORY https://github.com/bshoshany/thread-pool
+)
+FetchContent_MakeAvailable(thread_pool)
+
+# Load Utility library
+add_subdirectory(Utility)
+
+# Load external dependencies
+add_subdirectory(external)
 
 # The compiled library code is here
 add_subdirectory(src)
 
 # The executable code is here
 add_subdirectory(apps)
-
-# Load Utility library
-add_subdirectory(Utility)
 
 # Testing only available if this is the main app
 if(BUILD_TESTING)

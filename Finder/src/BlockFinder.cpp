@@ -1,7 +1,7 @@
-#include "BlockFinder.h"
+#include "BlockFinder.hpp"
 
-#include "DimBlockFinder.h"
-#include "DataExtractor.h"
+#include "DataExtractor.hpp"
+#include "DimBlockFinder.hpp"
 
 void BlockFinder::Search(const std::filesystem::path& pathToWorld,
 	const std::vector<int>& dims, const std::vector<int>& id)

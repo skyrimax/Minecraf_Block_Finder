@@ -1,8 +1,8 @@
-#include "DimBlockFinder.h"
+#include "DimBlockFinder.hpp"
 
 #include <sstream>
 
-#include "RegionBlockFinder.h"
+#include "RegionBlockFinder.hpp"
 
 void DimBlockFinder::setDim(int dim)
 {

@@ -4,10 +4,10 @@
 #include <vector>
 #include <string>
 #include <filesystem>
-#include <BS_thread_pool.hpp>
+#include "BS_thread_pool.hpp"
 
-#include "Output.h"
-#include "Coordinate.h"
+#include "Output.hpp"
+#include "Coordinate.hpp"
 
 class BlockFinder
 {

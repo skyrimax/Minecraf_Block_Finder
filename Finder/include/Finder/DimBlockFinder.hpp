@@ -7,9 +7,9 @@
 
 #include "thread_pool.hpp"
 
-#include "Coordinate.h"
+#include "Coordinate.hpp"
 
-#include "Output.h"
+#include "Output.hpp"
 
 class DimBlockFinder
 {
