@@ -40,14 +40,6 @@ FetchContent_Declare(
 )
 FetchContent_MakeAvailable(argparse)
 
-# Fetch version 3.11.2 of nlohmann json
-FetchContent_Declare(
-    json
-    URL https://github.com/nlohmann/json/releases/download/v3.11.2/json.tar.xz
-    DOWNLOAD_EXTRACT_TIMESTAMP True
-)
-FetchContent_MakeAvailable(json)
-
 # The compiled library code is here
 add_subdirectory(src)
 

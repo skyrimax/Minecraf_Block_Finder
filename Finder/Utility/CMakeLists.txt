@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 3.14)
 
 # Project name and a few useful settings. Other commands can pick up the results
 project(
-    utility
+    utility_lib
     VERSION 0.1
     DESCRIPTION "Utilies used by the Finder library for coordinates and check if a file is empty"
     LANGUAGES CXX)
@@ -29,4 +29,18 @@ if(CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME)
     else()
         message(STATUS "Doxygen not found, not building docs")
     endif()
+endif()
+
+# Load external dependencies
+add_subdirectory(extern)
+
+# The compiled library code is here
+add_subdirectory(src)
+
+# The executable code is here
+add_subdirectory(apps)
+
+# Testing only available if this is the main app
+if(BUILD_TESTING)
+  add_subdirectory(tests)
 endif()

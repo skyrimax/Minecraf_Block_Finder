@@ -4,8 +4,6 @@
 #include <iostream>
 #include <filesystem>
 
-#include <thread>
-
 #include <argparse/argparse.hpp>
 
 #include "BlockFinder.hpp"

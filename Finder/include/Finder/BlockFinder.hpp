@@ -4,15 +4,14 @@
 #include <vector>
 #include <string>
 #include <filesystem>
-#include "BS_thread_pool.hpp"
 
-#include "Output.hpp"
+#include "BS_thread_pool.hpp"
 #include "Coordinate.hpp"
 
 class BlockFinder
 {
 public:
-	BlockFinder(Output::OutputType outputType = Output::OutputType::CSV) :
+	BlockFinder() :
 		pool{std::thread::hardware_concurrency()}
 	{
 		
@@ -31,6 +30,5 @@ private:
 
 	void output(std::map<int, std::map<int, std::vector<Coordinate>>> matches);
 
-	Output::OutputType m_outputType;
 	BS::thread_pool pool;
 };

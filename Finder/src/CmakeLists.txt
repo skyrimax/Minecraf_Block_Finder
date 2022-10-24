@@ -5,9 +5,7 @@
 # CONFIGURE_DEPENDS "${minecraft_block_finder_SOURCE_DIR}/include/modern/*.hpp")
 set(HEADER_LIST
     "${finder_lib_SOURCE_DIR}/include/Finder/BlockFinder.hpp"
-    "${finder_lib_SOURCE_DIR}/include/Finder/DataExtractor.hpp"
-    "${finder_lib_SOURCE_DIR}/include/Finder/DimBlockFinder.hpp"
-    "${finder_lib_SOURCE_DIR}/include/Finder/RegionBlockFinder.hpp")
+    "${finder_lib_SOURCE_DIR}/include/Finder/DataExtractor.hpp")
 
 set(EXTERNAL_HEADER_LIST
     "${thread_pool_SOURCE_DIR}/BS_thread_pool.hpp")
@@ -16,8 +14,6 @@ set(EXTERNAL_HEADER_LIST
 add_library(finder_library
             BlockFinder.cpp
             DataExtractor.cpp
-            DimBlockFinder.cpp
-            RegionBlockFinder.cpp
             ${HEADER_LIST}
             ${EXTERNAL_HEADER_LIST})
 
@@ -25,6 +21,10 @@ add_library(finder_library
 target_include_directories(finder_library PUBLIC
                             ../include/Finder
                             ${thread_pool_SOURCE_DIR})
+
+target_link_libraries(finder_library PUBLIC
+                        nlohmann_json::nlohmann_json
+                        utility_library)
 
 # All users of this library will need at least C++17
 target_compile_features(finder_library PUBLIC cxx_std_17)

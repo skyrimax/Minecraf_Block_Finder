@@ -37,10 +37,18 @@ include(FetchContent)
 FetchContent_Declare(
     NBTExplorer
     URL https://github.com/jaquadro/NBTExplorer/releases/download/v2.8.0-win/NBTExplorer-2.8.0.zip
-    DOWNLOAD_EXTRACT_TIMESTAMP True
+    #DOWNLOAD_EXTRACT_TIMESTAMP True
 )
 FetchContent_MakeAvailable(NBTExplorer)
 message("NBTExplorer folder id : ${nbtexplorer_SOURCE_DIR}")
+
+# Fetch version 3.11.2 of nlohmann json
+FetchContent_Declare(
+    json
+    URL https://github.com/nlohmann/json/releases/download/v3.11.2/json.tar.xz
+    #DOWNLOAD_EXTRACT_TIMESTAMP True
+)
+FetchContent_MakeAvailable(json)
 
 # fetch latest argparse
 FetchContent_Declare(
@@ -53,7 +61,7 @@ FetchContent_MakeAvailable(thread_pool)
 add_subdirectory(Utility)
 
 # Load external dependencies
-add_subdirectory(external)
+add_subdirectory(extern)
 
 # The compiled library code is here
 add_subdirectory(src)

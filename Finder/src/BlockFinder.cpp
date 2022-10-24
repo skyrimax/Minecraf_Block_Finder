@@ -1,7 +1,6 @@
 #include "BlockFinder.hpp"
 
 #include "DataExtractor.hpp"
-#include "DimBlockFinder.hpp"
 
 void BlockFinder::Search(const std::filesystem::path& pathToWorld,
 	const std::vector<int>& dims, const std::vector<int>& id)
@@ -20,12 +19,12 @@ void BlockFinder::Search(const std::filesystem::path& pathToWorld,
 
 	auto matches = pool.parallelize_loop(0, dims.size(), loop);
 
-	for (size_t i = 0; i < matches.f.size(); ++i) {
-		while(matches.f[i].wait_for(std::chrono::microseconds(0)) != std::future_status::ready) {
+	for (size_t i = 0; i < matches.size(); ++i) {
+		while(matches[i].wait_for(std::chrono::microseconds(0)) != std::future_status::ready) {
 			std::this_thread::yield();
 		}
 
-		allMathces.insert(matches.f[i].get().begin(), matches.f[i].get().end());
+		allMathces.insert(matches[i].get().begin(), matches[i].get().end());
 	}
 
 	output(allMathces);
@@ -68,13 +67,13 @@ std::map<int, std::vector<Coordinate>> BlockFinder::searchDim(const std::filesys
 
 	auto matches = pool.parallelize_loop(0, regionFiles.size(), loop);
 
-	for (size_t i = 0; i < matches.f.size(); ++i) {
-		while (matches.f[i].wait_for(std::chrono::microseconds(0)) != std::future_status::ready) {
+	for (size_t i = 0; i < matches.size(); ++i) {
+		while (matches[i].wait_for(std::chrono::microseconds(0)) != std::future_status::ready) {
 			std::this_thread::yield();
 		}
 
 		for (const auto& id : ids) {
-			allMatches[id].insert(allMatches[id].end(), matches.f[i].get()[id].begin(), matches.f[i].get()[id].end());
+			allMatches[id].insert(allMatches[id].end(), matches[i].get()[id].begin(), matches[i].get()[id].end());
 		}
 	}
 
@@ -109,13 +108,13 @@ std::map<int, std::vector<Coordinate>> BlockFinder::searchRegion(const std::file
 
 	auto matches = pool.parallelize_loop(0, DataExtractor::nbChunksInRegion(), loop);
 
-	for (size_t i = 0; i < matches.f.size(); ++i) {
-		while (matches.f[i].wait_for(std::chrono::microseconds(0)) != std::future_status::ready) {
+	for (size_t i = 0; i < matches.size(); ++i) {
+		while (matches[i].wait_for(std::chrono::microseconds(0)) != std::future_status::ready) {
 			std::this_thread::yield();
 		}
 
 		for (const auto& id : ids) {
-			allMatches[id].insert(allMatches[id].end(), matches.f[i].get()[id].begin(), matches.f[i].get()[id].end());
+			allMatches[id].insert(allMatches[id].end(), matches[i].get()[id].begin(), matches[i].get()[id].end());
 		}
 	}
 
