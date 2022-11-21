@@ -29,11 +29,11 @@ target_link_libraries(finder_library PUBLIC
 # All users of this library will need at least C++17
 target_compile_features(finder_library PUBLIC cxx_std_17)
 
-add_custom_command(TARGET finder_library POST_BUILD
-    COMMAND ${CMAKE_COMMAND} -E copy
-    "${nbtexplorer_SOURCE_DIR}/NBTUtil.exe"
-    ${RUNTIME_OUTPUT_DIRECTORY}
-)
+# add_custom_command(TARGET finder_library POST_BUILD
+#     COMMAND ${CMAKE_COMMAND} -E copy
+#     "${nbtexplorer_SOURCE_DIR}/NBTUtil.exe"
+#     ${RUNTIME_OUTPUT_DIRECTORY}
+# )
 
 # IDEs should put the headers in a nice place
 source_group(
