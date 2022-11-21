@@ -27,7 +27,6 @@ private:
 	static std::vector<std::vector<std::vector<int>>> parseChunkDataFromWorld(
 		std::filesystem::path pathToRegion, size_t chunkX, size_t chunkZ);
 
-	static std::string sectionDataFileName(int regionX, int regionZ, size_t chunkX, size_t chunkZ, size_t sectionY);
 	static std::string chunkDataFilename(std::filesystem::path regionFile, size_t chunkX, size_t chunkZ);
 
 	inline static const int m_maxSectionY = 16;

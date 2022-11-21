@@ -45,11 +45,20 @@ std::vector<std::vector<std::vector<int>>> DataExtractor::parseChunkDataFromWorl
 	return chunk;
 }
 
-std::string DataExtractor::sectionDataFileName(int regionX, int regionZ, size_t chunkX, size_t chunkZ, size_t sectionY)
+std::string DataExtractor::chunkDataFilename(std::filesystem::path regionFile, size_t chunkX, size_t chunkZ)
 {
 	std::stringstream filename;
 
-	filename << regionX << "." << regionZ << "." << chunkX << "." << chunkZ << "." << sectionY << ".data.json";
+	std::string regionCoordinate = regionFile.filename().replace_extension("").string().substr(2);
+
+	std::string dim;
+
+	if((regionFile.end()-- -- --)->string().find("DIM")!= std::string::npos)
+		dim = (regionFile.end()-- -- --)->string();
+	else
+		dim = "DIM0";
+
+	filename << dim << "." << regionCoordinate << "." << chunkX << "." << chunkZ << ".json";
 
 	return filename.str();
 }
