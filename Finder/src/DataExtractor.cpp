@@ -110,7 +110,7 @@ std::vector<int> DataExtractor::parseSectionDataFromWorld(int regionX, int regio
 		std::stringstream error;
 
 		error << "Unable to open file " << filename;
-		throw std::exception(error.str().c_str());
+		throw std::runtime_error(error.str().c_str());
 	}
 
 	file.ignore(2);

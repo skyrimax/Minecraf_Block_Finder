@@ -5,7 +5,7 @@
 #include <fstream>
 #include <nlohmann/json.hpp>
 
-#include "DataExtractor.h"
+#include "DataExtractor.hpp"
 
 int main()
 {
