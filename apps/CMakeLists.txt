@@ -3,7 +3,7 @@ target_compile_features(MinecraftBlockFinder PRIVATE cxx_std_17)
 
 target_link_libraries(MinecraftBlockFinder PRIVATE minecraft_block_finder_library argparse finder_library)
 
-add_executable(Test Test.cpp)
+add_executable(Test test.cpp)
 target_compile_features(Test PRIVATE cxx_std_17)
 
 target_link_libraries(Test PRIVATE minecraft_block_finder_library argparse finder_library)
