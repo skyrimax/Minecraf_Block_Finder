@@ -3,9 +3,9 @@ cmake_minimum_required(VERSION 3.14)
 
 # Project name and a few useful settings. Other commands can pick up the results
 project(
-    utility_lib
+    coordinate_lib
     VERSION 0.1
-    DESCRIPTION "Utilies used by the Finder library for coordinates and check if a file is empty"
+    DESCRIPTION "Basic 3d coordinate cartesian system library, only cointains the Coordinate class"
     LANGUAGES CXX)
 
 # Only do these if this is the main project, and not if it is included through
