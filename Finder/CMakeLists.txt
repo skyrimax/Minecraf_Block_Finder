@@ -58,7 +58,7 @@ FetchContent_Declare(
 FetchContent_MakeAvailable(thread_pool)
 
 # Load Utility library
-add_subdirectory(Utility)
+add_subdirectory(Coordinate)
 
 # Load external dependencies
 add_subdirectory(extern)
