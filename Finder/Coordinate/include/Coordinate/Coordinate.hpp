@@ -30,7 +30,7 @@ struct Coordinate
 	 * @param lhs 
 	 * @param rhs 
 	 * @return true if the lhs coordinate is closer to origin or it x, y, z is smaller (first one to differ)
-	 * @return false if the rhs coordinate is closer to origin or it x, y, z is smaller (first one to differ)
+	 * @return false otherwise
 	 */
 	friend bool operator< (const Coordinate& lhs, const Coordinate& rhs);
 
@@ -39,15 +39,15 @@ struct Coordinate
 	friend bool operator<= (const Coordinate& lhs, const Coordinate& rhs);
 
 	/**
-	 * @brief 
+	 * @brief compare if 2 coordinates are the same, which means x, y, z are equal between the 2 operands
 	 * 
 	 * @param lhs 
 	 * @param rhs 
-	 * @return true 
-	 * @return false 
+	 * @return true if x, y and z are equals between lhs and rhs
+	 * @return false otherwise
 	 */
 	friend bool operator== (const Coordinate& lhs, const Coordinate& rhs);
-	
+
 	friend bool operator!= (const Coordinate& lhs, const Coordinate& rhs);
 
 	int x;
