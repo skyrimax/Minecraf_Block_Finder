@@ -55,3 +55,16 @@ bool operator>= (const Coordinate& lhs, const Coordinate& rhs)
 {
     return !(lhs < rhs);
 }
+
+// compare if 2 coordinates are the same, which means x, y, z are equal between the 2 operands
+bool operator== (const Coordinate& lhs, const Coordinate& rhs)
+{
+    return (lhs.x == rhs.x) &&
+            (lhs.y == rhs.y) &&
+            (lhs.z == rhs.z);
+}
+
+bool operator!= (const Coordinate& lhs, const Coordinate& rhs)
+{
+    return !(lhs == rhs);
+}
