@@ -1,4 +1,7 @@
 #pragma once
+
+#include <ostream>
+
 struct Coordinate
 {
 	// Constructors
@@ -22,3 +25,14 @@ struct Coordinate
 	int y;
 	int z;
 };
+
+	// Stream operators
+
+	/**
+	 * @brief Writes a coordinate to an output stream in the format (x,y,z)
+	 * 
+	 * @param os Output stream to witch the Coordinate will be writen
+	 * @param coordinate Coordinate object to be writen
+	 * @return the output stream
+	 */
+	std::ostream& operator<<(std::ostream& os, const Coordinate& coordinate);
