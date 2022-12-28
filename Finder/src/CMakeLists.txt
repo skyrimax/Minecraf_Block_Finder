@@ -24,7 +24,7 @@ target_include_directories(finder_library PUBLIC
 
 target_link_libraries(finder_library PUBLIC
                         nlohmann_json::nlohmann_json
-                        utility_library)
+                        coordinate_library)
 
 # All users of this library will need at least C++17
 target_compile_features(finder_library PUBLIC cxx_std_17)
