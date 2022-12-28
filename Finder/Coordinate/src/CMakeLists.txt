@@ -7,16 +7,16 @@ set(HEADER_LIST
     "${utility_lib_SOURCE_DIR}/include/Utility/Coordinate.hpp")
 
 # Make an automatic library - will be static or dynamic based on user setting
-add_library(utility_library
+add_library(coordinate_library
             Coordinate.cpp
             ${HEADER_LIST})
 
 # We need this directory, and users of our library will need it too
-target_include_directories(utility_library PUBLIC
+target_include_directories(coordinate_library PUBLIC
                             ../include/Utility)
 
 # All users of this library will need at least C++17
-target_compile_features(utility_library PUBLIC cxx_std_17)
+target_compile_features(coordinate_library PUBLIC cxx_std_17)
 
 # IDEs should put the headers in a nice place
 source_group(
