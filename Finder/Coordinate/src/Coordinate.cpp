@@ -41,3 +41,17 @@ bool operator< (const Coordinate& lhs, const Coordinate& rhs)
 
     return lhs.z < rhs.z;
 }
+
+bool operator> (const Coordinate& lhs, const Coordinate& rhs){
+    return rhs < lhs;
+}
+
+bool operator<= (const Coordinate& lhs, const Coordinate& rhs)
+{
+    return !(lhs > rhs);
+}
+
+bool operator>= (const Coordinate& lhs, const Coordinate& rhs)
+{
+    return !(lhs < rhs);
+}
