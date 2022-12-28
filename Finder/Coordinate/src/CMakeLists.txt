@@ -13,7 +13,7 @@ add_library(coordinate_library
 
 # We need this directory, and users of our library will need it too
 target_include_directories(coordinate_library PUBLIC
-                            ../include/Utility)
+                            ../include/Coordinate)
 
 # All users of this library will need at least C++17
 target_compile_features(coordinate_library PUBLIC cxx_std_17)
