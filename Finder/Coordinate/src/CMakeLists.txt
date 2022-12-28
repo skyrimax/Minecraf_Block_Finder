@@ -4,7 +4,7 @@
 # Optionally glob, but only for CMake 3.12 or later: file(GLOB HEADER_LIST
 # CONFIGURE_DEPENDS "${minecraft_block_finder_SOURCE_DIR}/include/modern/*.hpp")
 set(HEADER_LIST
-    "${utility_lib_SOURCE_DIR}/include/Utility/Coordinate.hpp")
+    "${coordinate_lib_SOURCE_DIR}/include/Coordinate/Coordinate.hpp")
 
 # Make an automatic library - will be static or dynamic based on user setting
 add_library(coordinate_library
