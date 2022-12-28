@@ -1,6 +1,7 @@
 #pragma once
 struct Coordinate
 {
+	// Constructors
 	Coordinate() = default;
 
 	Coordinate(int x, int y, int z) :
@@ -8,6 +9,10 @@ struct Coordinate
 	{
 		
 	}
+
+	Coordinate(const Coordinate &) = default;
+
+	Coordinate(Coordinate &&) = default;
 
 	int x;
 	int y;
