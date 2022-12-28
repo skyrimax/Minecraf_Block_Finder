@@ -33,6 +33,7 @@ struct Coordinate
 	 * @return false if the rhs coordinate is closer to origin or it x, y, z is smaller (first one to differ)
 	 */
 	friend bool operator< (const Coordinate& lhs, const Coordinate& rhs);
+
 	friend bool operator> (const Coordinate& lhs, const Coordinate& rhs);
 	friend bool operator<= (const Coordinate& lhs, const Coordinate& rhs);
 	friend bool operator<= (const Coordinate& lhs, const Coordinate& rhs);
@@ -46,6 +47,7 @@ struct Coordinate
 	 * @return false 
 	 */
 	friend bool operator== (const Coordinate& lhs, const Coordinate& rhs);
+	
 	friend bool operator!= (const Coordinate& lhs, const Coordinate& rhs);
 
 	int x;
