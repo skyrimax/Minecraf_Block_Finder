@@ -1,0 +1,1 @@
+modify CMakeLists.txt files in doc folders of libraries as they are not modified from exemple
