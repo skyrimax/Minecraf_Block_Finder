@@ -22,15 +22,6 @@ protected:
         unit1Zpos = Coordinate(0, 0, 1);
         unit1Zneg = Coordinate(0, 0, -1);
 
-        unit1XposYposZpos = Coordinate(1/sqrt(3), 1/sqrt(3), 1/sqrt(3));
-        unit1XposYposZneg = Coordinate(1/sqrt(3), 1/sqrt(3), -1/sqrt(3));
-        unit1XposYnegZpos = Coordinate(1/sqrt(3), -1/sqrt(3), 1/sqrt(3));
-        unit1XposYnegZneg = Coordinate(1/sqrt(3), -1/sqrt(3), -1/sqrt(3));
-        unit1XnegYposZpos = Coordinate(-1/sqrt(3), 1/sqrt(3), 1/sqrt(3));
-        unit1XnegYposZneg = Coordinate(-1/sqrt(3), 1/sqrt(3), -1/sqrt(3));
-        unit1XnegYnegZpos = Coordinate(-1/sqrt(3), -1/sqrt(3), 1/sqrt(3));
-        unit1XnegYnegZneg = Coordinate(-1/sqrt(3), -1/sqrt(3), -1/sqrt(3));
-
         unit2Xpos = Coordinate(2, 0, 0);
         unit2Xneg = Coordinate(-2, 0, 0);
         unit2Ypos = Coordinate(0, 2, 0);
@@ -38,14 +29,14 @@ protected:
         unit2Zpos = Coordinate(0, 0, 2);
         unit2Zneg = Coordinate(0, 0, -2);
 
-        unit2XposYposZpos = Coordinate(2/sqrt(3), 2/sqrt(3), 2/sqrt(3));
-        unit2XposYposZneg = Coordinate(2/sqrt(3), 2/sqrt(3), -2/sqrt(3));
-        unit2XposYnegZpos = Coordinate(2/sqrt(3), -2/sqrt(3), 2/sqrt(3));
-        unit2XposYnegZneg = Coordinate(2/sqrt(3), -2/sqrt(3), -2/sqrt(3));
-        unit2XnegYposZpos = Coordinate(-2/sqrt(3), 2/sqrt(3), 2/sqrt(3));
-        unit2XnegYposZneg = Coordinate(-2/sqrt(3), 2/sqrt(3), -2/sqrt(3));
-        unit2XnegYnegZpos = Coordinate(-2/sqrt(3), -2/sqrt(3), 2/sqrt(3));
-        unit2XnegYnegZneg = Coordinate(-2/sqrt(3), -2/sqrt(3), -2/sqrt(3));
+        unit2XposYposZpos = Coordinate(1, 1, 1);
+        unit2XposYposZneg = Coordinate(1, 1, -1);
+        unit2XposYnegZpos = Coordinate(1, -1, 1);
+        unit2XposYnegZneg = Coordinate(1, -1, -1);
+        unit2XnegYposZpos = Coordinate(-1, 1, 1);
+        unit2XnegYposZneg = Coordinate(-1, 1, -1);
+        unit2XnegYnegZpos = Coordinate(-1, -1, 1);
+        unit2XnegYnegZneg = Coordinate(-1, -1, -1);
     }
 
     Coordinate orgin;
@@ -56,15 +47,6 @@ protected:
     Coordinate unit1Yneg;
     Coordinate unit1Zpos;
     Coordinate unit1Zneg;
-
-    Coordinate unit1XposYposZpos;
-    Coordinate unit1XposYposZneg;
-    Coordinate unit1XposYnegZpos;
-    Coordinate unit1XposYnegZneg;
-    Coordinate unit1XnegYposZpos;
-    Coordinate unit1XnegYposZneg;
-    Coordinate unit1XnegYnegZpos;
-    Coordinate unit1XnegYnegZneg;
 
     Coordinate unit2Xpos;
     Coordinate unit2Xneg;
@@ -83,13 +65,6 @@ protected:
     Coordinate unit2XnegYnegZneg;
 };
 
-
-/**
- * Assignment operators:
- *  1- Copy assignment operator
- *  2- Move assignment operator
-*/
-
 /**
  * Comparison operators:
  *  1- < operator
@@ -100,6 +75,30 @@ protected:
  *  5- == operator
  *  6- != operator
 */
+TEST_F(CoordinateTest, originLowerThan) {
+    EXPECT_LT(orgin, unit1Xpos);
+    EXPECT_LT(orgin, unit1Xneg);
+    EXPECT_LT(orgin, unit1Ypos);
+    EXPECT_LT(orgin, unit1Yneg);
+    EXPECT_LT(orgin, unit1Zpos);
+    EXPECT_LT(orgin, unit1Zneg);
+    
+    EXPECT_LT(orgin, unit2Xpos);
+    EXPECT_LT(orgin, unit2Xneg);
+    EXPECT_LT(orgin, unit2Ypos);
+    EXPECT_LT(orgin, unit2Yneg);
+    EXPECT_LT(orgin, unit2Zpos);
+    EXPECT_LT(orgin, unit2Zneg);
+
+    EXPECT_LT(orgin, unit2XposYposZpos);
+    EXPECT_LT(orgin, unit2XposYposZneg);
+    EXPECT_LT(orgin, unit2XposYnegZpos);
+    EXPECT_LT(orgin, unit2XposYnegZneg);
+    EXPECT_LT(orgin, unit2XnegYposZpos);
+    EXPECT_LT(orgin, unit2XnegYposZneg);
+    EXPECT_LT(orgin, unit2XnegYnegZpos);
+    EXPECT_LT(orgin, unit2XnegYnegZneg);
+}
 
 /**
  * Stream operators:
