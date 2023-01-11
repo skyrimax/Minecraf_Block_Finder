@@ -26,3 +26,6 @@ target_link_libraries(
   coordinate_library
   GTest::gtest_main
 )
+
+include(GoogleTest)
+gtest_discover_tests(coordinate_test)
